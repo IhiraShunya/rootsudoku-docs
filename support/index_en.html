@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App Support | RootSudoku</title>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Segoe UI', 'Arial', sans-serif; margin: 0; background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%); min-height: 100vh; }
+    .container { max-width: 700px; margin: 3em auto; background: #fff; padding: 2.5em 2em; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); border: 1px solid #e3eafc; }
+    h1 { color: #007aff; font-size: 2.2em; margin-bottom: 0.5em; text-align: center; letter-spacing: 0.05em; }
+    h2 { color: #333; margin-top: 2em; border-left: 4px solid #007aff; padding-left: 0.5em; font-size: 1.3em; }
+    ul { margin: 1em 0 1.5em 1.5em; padding: 0; }
+    li { margin-bottom: 0.5em; font-size: 1.05em; }
+    a { color: #007aff; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #005bb5; text-decoration: underline; }
+    .footer { text-align: center; color: #888; font-size: 0.95em; margin-top: 2em; }
+    .btn { display: inline-block; background: #007aff; color: #fff; padding: 0.6em 1.4em; border-radius: 6px; text-decoration: none; font-weight: bold; margin: 0.5em 0; box-shadow: 0 2px 8px rgba(0,122,255,0.08); transition: background 0.2s; }
+    .btn:hover { background: #005bb5; }
+    .screenshots { display: flex; gap: 1.2em; justify-content: center; margin: 2em 0 1em 0; width: 100%; }
+    .screenshot-img { width: 100%; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.10); border: 1px solid #e3eafc; background: #f6f8fa; object-fit: cover; transition: transform 0.2s; flex: 1 1 0; margin: 0; }
+    .screenshot-img:not(:last-child) { margin-right: 1.2em; }
+    .header { width: 100%; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-bottom: 1px solid #e3eafc; padding: 0.5em 0; margin-bottom: 2em; position: relative; z-index: 10; }
+    .header-inner { max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 0.5em; padding: 0 2em; text-align: center; }
+    .app-icon { width: 80px; height: 80px; border-radius: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.10); background: #eee; object-fit: cover; display: block; margin-bottom: 0.5em; }
+    .app-title { font-family: 'Segoe UI', 'Arial', sans-serif; font-size: 2.6em; font-weight: bold; color: #007aff; letter-spacing: 0.08em; text-shadow: 0 4px 16px rgba(0,122,255,0.18), 0 1px 0 #fff, 0 8px 32px rgba(0,0,0,0.10); display: block; line-height: 1.1; margin-bottom: 0.2em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100vw; }
+    @media (max-width: 480px) { .app-title { font-size: 1.5em; } }
+    .app-subtitle { font-size: 1.1em; color: #555; margin-top: 0.1em; margin-left: 0; letter-spacing: 0.03em; display: block; }
+    .game-description { margin-bottom: 2em; font-size: 1.08em; line-height: 1.8; color: #222; }
+    .rule-list { margin: 1em 0 1.5em 1.5em; padding: 0; list-style: disc inside; font-size: 1.08em; }
+    .rule-red { color: #e74c3c; font-weight: bold; }
+    .rule-blue { color: #007aff; font-weight: bold; }
+    .rule-green { color: #27ae60; font-weight: bold; }
+    .game-description .catch { font-size: 1.15em; color: #007aff; font-weight: bold; margin-top: 1.2em; text-align: center; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <img src="images/appicon.png" alt="RootSudoku Icon" class="app-icon" />
+      <span class="app-title">RootSudoku</span>
+      <span class="app-subtitle">A new puzzle: All concatenations, sums, and products are perfect squares!</span>
+    </div>
+  </header>
+  <div class="container">
+    <div class="screenshots">
+      <img src="images/en/SS.png" alt="Screenshot 1" class="screenshot-img" />
+      <!-- Add more screenshots here if needed -->
+    </div>
+    <h2>Game Introduction</h2>
+    <div class="game-description">
+      <p>RootSudoku is a new puzzle game that combines the basic rules of Sudoku with the unique condition of perfect squares (roots).</p>
+      <p>In addition to the classic Sudoku rule of no duplicate numbers in rows, columns, and blocks, the following <strong>Root Rules</strong> are added for deeper logical thinking:</p>
+      <ul class="rule-list">
+        <li><span class="rule-red">Red Frame:</span> Concatenated numbers form a perfect square</li>
+        <li><span class="rule-blue">Blue Frame:</span> The sum of numbers is a perfect square</li>
+        <li><span class="rule-green">Green Frame:</span> The product of numbers is a perfect square</li>
+      </ul>
+      <p>Each board features a unique combination of frames to challenge your logic.<br>
+      Highly recommended for those who want more than ordinary Sudoku.<br>
+      Includes auto error check and a dedicated calculator for comfortable play!</p>
+      <p class="catch">Can you solve all the rules?</p>
+    </div>
+    <h2 id="support">Support</h2>
+    <p>If you have any questions, requests, or bug reports, please contact us at the email address below.</p>
+    <ul>
+      <li>Support Email: <a href="mailto:ishun.app.contact@gmail.com">ishun.app.contact@gmail.com</a></li>
+    </ul>
+    <h2>Privacy Policy</h2>
+    <p><a href="privacy_en.html" class="btn">View Privacy Policy</a></p>
+    <div class="footer">
+      <hr>
+      <p>© 2025 Shunya Ihira</p>
+    </div>
+  </div>
+</body>
+</html>
